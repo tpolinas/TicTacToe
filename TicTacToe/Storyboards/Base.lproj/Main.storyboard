@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xkx-df-lMV">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--MainMenu-->
+        <scene sceneID="gyN-tV-Pbq">
+            <objects>
+                <viewController title="MainMenu" id="8Cy-nM-UUD" customClass="MainMenu" customModule="TicTacToe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VwH-xy-azF">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grid" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="QB0-O3-SjN">
+                                <rect key="frame" x="107" y="234.33333333333337" width="214" height="211.66666666666663"/>
+                                <color key="tintColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="QB0-O3-SjN" secondAttribute="height" id="bP3-Ot-4pf"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TIC TAC TOE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Oy9-4u-Dig">
+                                <rect key="frame" x="107" y="462" width="214" height="42"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="34"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" systemColor="systemIndigoColor"/>
+                                <size key="shadowOffset" width="2" height="-1"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PLAY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eEf-Vu-yf3">
+                                <rect key="frame" x="183.33333333333334" y="554" width="61.333333333333343" height="31"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="25"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" systemColor="systemIndigoColor"/>
+                                <size key="shadowOffset" width="2" height="-1"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hpV-a0-Wen">
+                                <rect key="frame" x="107" y="590" width="214" height="35.666666666666629"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hpV-a0-Wen" secondAttribute="height" multiplier="6:1" id="sHP-gS-HuU"/>
+                                </constraints>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="WITH FRIEND">
+                                            <attributes>
+                                                <font key="NSFont" size="12" name="AvenirNext-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <buttonConfiguration key="configuration" style="tinted" title="VS FRIEND" cornerStyle="capsule">
+                                    <backgroundConfiguration key="background" strokeWidth="2">
+                                        <color key="backgroundColor" red="0.7549515962600708" green="0.91562551259994507" blue="0.55511587858200073" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="strokeColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="16"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="playButtonAction:" destination="8Cy-nM-UUD" eventType="touchUpInside" id="6Jr-Bc-hVC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xci-vr-ypa">
+                                <rect key="frame" x="107" y="630.66666666666663" width="214" height="35.666666666666629"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Xci-vr-ypa" secondAttribute="height" multiplier="6:1" id="HoY-yI-YTU"/>
+                                </constraints>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="WITH FRIEND">
+                                            <attributes>
+                                                <font key="NSFont" size="12" name="AvenirNext-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <buttonConfiguration key="configuration" style="tinted" title="VS COMPUTER" cornerStyle="capsule">
+                                    <backgroundConfiguration key="background" strokeWidth="2">
+                                        <color key="backgroundColor" red="0.86761903762817383" green="0.90998512506484985" blue="0.49219280481338501" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="strokeColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="16"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="playButtonAction:" destination="8Cy-nM-UUD" eventType="touchUpInside" id="vKM-bY-GDt"/>
+                                </connections>
+                            </button>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eyR-lk-NMg" customClass="SettingsView" customModule="TicTacToe" customModuleProvider="target">
+                                <rect key="frame" x="42.666666666666657" y="232.99999999999997" width="342.66666666666674" height="433.33333333333326"/>
+                                <color key="backgroundColor" red="0.6823140754" green="0.6259334017" blue="0.85371283330000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="oJK-lw-6Yj"/>
+                        <color key="backgroundColor" red="0.6823140754" green="0.6259334017" blue="0.85371283330000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="QB0-O3-SjN" firstAttribute="width" secondItem="VwH-xy-azF" secondAttribute="width" multiplier="0.5" id="9bx-By-MZr"/>
+                            <constraint firstItem="Xci-vr-ypa" firstAttribute="width" secondItem="hpV-a0-Wen" secondAttribute="width" id="Fk7-Rl-Ztg"/>
+                            <constraint firstItem="Xci-vr-ypa" firstAttribute="centerX" secondItem="hpV-a0-Wen" secondAttribute="centerX" id="FpE-q1-uEZ"/>
+                            <constraint firstItem="Oy9-4u-Dig" firstAttribute="top" secondItem="QB0-O3-SjN" secondAttribute="bottom" constant="15" id="FvK-qv-Iva"/>
+                            <constraint firstItem="eyR-lk-NMg" firstAttribute="bottom" secondItem="Xci-vr-ypa" secondAttribute="bottom" id="HPu-og-JZJ"/>
+                            <constraint firstItem="Oy9-4u-Dig" firstAttribute="width" secondItem="QB0-O3-SjN" secondAttribute="width" id="JkU-55-L5z"/>
+                            <constraint firstItem="QB0-O3-SjN" firstAttribute="centerX" secondItem="oJK-lw-6Yj" secondAttribute="centerX" id="NPx-h6-YAT"/>
+                            <constraint firstItem="eEf-Vu-yf3" firstAttribute="centerX" secondItem="Oy9-4u-Dig" secondAttribute="centerX" id="UCC-5j-cZi"/>
+                            <constraint firstItem="eyR-lk-NMg" firstAttribute="centerX" secondItem="oJK-lw-6Yj" secondAttribute="centerX" id="X7t-8A-TZC"/>
+                            <constraint firstItem="eEf-Vu-yf3" firstAttribute="top" secondItem="Oy9-4u-Dig" secondAttribute="bottom" constant="50" id="Xej-vs-zG1"/>
+                            <constraint firstItem="hpV-a0-Wen" firstAttribute="centerX" secondItem="Oy9-4u-Dig" secondAttribute="centerX" id="das-nH-HEE"/>
+                            <constraint firstItem="Oy9-4u-Dig" firstAttribute="centerX" secondItem="QB0-O3-SjN" secondAttribute="centerX" id="ftm-wP-iUv"/>
+                            <constraint firstItem="hpV-a0-Wen" firstAttribute="top" secondItem="eEf-Vu-yf3" secondAttribute="bottom" constant="5" id="iKU-ov-vCa"/>
+                            <constraint firstItem="eyR-lk-NMg" firstAttribute="width" secondItem="VwH-xy-azF" secondAttribute="width" multiplier="0.8" id="nex-ql-WfS"/>
+                            <constraint firstItem="eyR-lk-NMg" firstAttribute="top" secondItem="QB0-O3-SjN" secondAttribute="top" id="rfo-0K-cp4"/>
+                            <constraint firstItem="QB0-O3-SjN" firstAttribute="centerY" secondItem="oJK-lw-6Yj" secondAttribute="centerY" constant="-150" id="t2J-4t-iCn"/>
+                            <constraint firstItem="hpV-a0-Wen" firstAttribute="width" secondItem="Oy9-4u-Dig" secondAttribute="width" id="vrY-l9-Ili"/>
+                            <constraint firstItem="Xci-vr-ypa" firstAttribute="top" secondItem="hpV-a0-Wen" secondAttribute="bottom" constant="5" id="x6i-VE-Qan"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="E4C-D1-Drc"/>
+                    <connections>
+                        <outlet property="settingsView" destination="eyR-lk-NMg" id="buZ-0A-B7m"/>
+                        <segue destination="beS-Z2-wsx" kind="show" identifier="goToGame" id="HjW-an-Ysh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vbl-iV-bdd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="104.46428571428571"/>
+        </scene>
+        <!--Game View Controller-->
+        <scene sceneID="UhN-IF-hqe">
+            <objects>
+                <viewController id="beS-Z2-wsx" customClass="GameViewController" customModule="TicTacToe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dPD-MV-IIe">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PLAYER #1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Xe-gG-HLr">
+                                <rect key="frame" x="43.666666666666657" y="213.66666666666666" width="78" height="19.333333333333343"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="16"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" systemColor="systemIndigoColor"/>
+                                <size key="shadowOffset" width="2" height="-1"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SCORE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ddo-T3-58I">
+                                <rect key="frame" x="182.66666666666666" y="105.66666666666667" width="62.666666666666657" height="25.000000000000014"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="20"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" systemColor="systemIndigoColor"/>
+                                <size key="shadowOffset" width="2" height="-1"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEk-wc-ScV">
+                                <rect key="frame" x="170" y="136.33333333333334" width="28" height="49"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="40"/>
+                                <color key="textColor" red="0.86761903762817383" green="0.90998512506484985" blue="0.49219280481338501" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" systemColor="systemIndigoColor"/>
+                                <size key="shadowOffset" width="2" height="-1"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PLAYER #2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lfA-va-34s">
+                                <rect key="frame" x="305" y="213.66666666666666" width="80.333333333333314" height="19.333333333333343"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="16"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" systemColor="systemIndigoColor"/>
+                                <size key="shadowOffset" width="2" height="-1"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="s28-oB-EcZ">
+                                <rect key="frame" x="10.666666666666657" y="329.66666666666663" width="406.66666666666674" height="400.66666666666663"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="s28-oB-EcZ" secondAttribute="height" id="P9r-z6-BCN"/>
+                                </constraints>
+                                <imageReference key="image" image="square" catalog="system" symbolScale="small" renderingMode="hierarchical-single">
+                                    <hierarchicalColors>
+                                        <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color red="0.6823140754" green="0.6259334017" blue="0.85371283330000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </hierarchicalColors>
+                                </imageReference>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lf5-ln-hFz" customClass="GameboardView" customModule="TicTacToe" customModuleProvider="target">
+                                <rect key="frame" x="71.666666666666657" y="387.66666666666663" width="284.66666666666674" height="284.66666666666663"/>
+                                <color key="backgroundColor" red="0.6823140754" green="0.6259334017" blue="0.85371283330000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Lf5-ln-hFz" secondAttribute="height" multiplier="1:1" id="ByG-K1-irV"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CJ8-A5-s8N">
+                                <rect key="frame" x="230" y="136.33333333333334" width="28" height="49"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="40"/>
+                                <color key="textColor" red="0.70209508720000002" green="0.81956530940000005" blue="0.48636361550000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" systemColor="systemIndigoColor"/>
+                                <size key="shadowOffset" width="2" height="-1"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dg-Dd-dlW">
+                                <rect key="frame" x="209" y="142.33333333333334" width="10.333333333333343" height="37"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" systemColor="systemIndigoColor"/>
+                                <size key="shadowOffset" width="2" height="-1"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PLAYER #1, YOUR TURN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="vz9-65-kTF">
+                                <rect key="frame" x="106.33333333333333" y="758.33333333333337" width="215.66666666666669" height="26"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="20"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" systemColor="systemIndigoColor"/>
+                                <size key="shadowOffset" width="2" height="2"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zn4-2e-BI8">
+                                <rect key="frame" x="107" y="809.33333333333337" width="214" height="53.333333333333371"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="zn4-2e-BI8" secondAttribute="height" multiplier="8:2" id="6DX-Jf-IDJ"/>
+                                </constraints>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="WITH FRIEND">
+                                            <attributes>
+                                                <font key="NSFont" size="12" name="AvenirNext-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <buttonConfiguration key="configuration" style="tinted" title="NEXT ROUND" cornerStyle="capsule">
+                                    <backgroundConfiguration key="background" strokeWidth="2">
+                                        <color key="backgroundColor" red="0.7549515962600708" green="0.91562551259994507" blue="0.55511587858200073" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="strokeColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="16"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="nextRoundButtonPressed:" destination="beS-Z2-wsx" eventType="touchUpInside" id="jZo-Nk-8xx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="LU9-9c-ThI"/>
+                        <color key="backgroundColor" red="0.6823140754" green="0.6259334017" blue="0.85371283330000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="CJ8-A5-s8N" firstAttribute="top" secondItem="LU9-9c-ThI" secondAttribute="top" constant="48.333333333333343" id="2kK-sE-nm8"/>
+                            <constraint firstItem="dEk-wc-ScV" firstAttribute="top" secondItem="LU9-9c-ThI" secondAttribute="top" constant="48.333333333333343" id="AJw-95-687"/>
+                            <constraint firstItem="vz9-65-kTF" firstAttribute="centerX" secondItem="Lf5-ln-hFz" secondAttribute="centerX" id="FPN-ek-6xh"/>
+                            <constraint firstItem="ddo-T3-58I" firstAttribute="centerX" secondItem="LU9-9c-ThI" secondAttribute="centerX" id="FPt-Ll-qjY"/>
+                            <constraint firstItem="dEk-wc-ScV" firstAttribute="centerX" secondItem="LU9-9c-ThI" secondAttribute="centerX" constant="-30" id="JUo-Rf-qvC"/>
+                            <constraint firstItem="Lf5-ln-hFz" firstAttribute="centerX" secondItem="s28-oB-EcZ" secondAttribute="centerX" id="Kgg-SB-Zt8"/>
+                            <constraint firstItem="zn4-2e-BI8" firstAttribute="width" secondItem="dPD-MV-IIe" secondAttribute="width" multiplier="0.5" id="LcQ-lO-ReH"/>
+                            <constraint firstItem="lfA-va-34s" firstAttribute="centerY" secondItem="7Xe-gG-HLr" secondAttribute="centerY" id="PGW-sR-u7Z"/>
+                            <constraint firstItem="ddo-T3-58I" firstAttribute="top" secondItem="LU9-9c-ThI" secondAttribute="top" constant="17.666666666666686" id="QjH-0U-efK"/>
+                            <constraint firstItem="LU9-9c-ThI" firstAttribute="bottom" secondItem="ddo-T3-58I" secondAttribute="bottom" constant="761.33333333333326" id="RXK-zb-e9N"/>
+                            <constraint firstItem="CJ8-A5-s8N" firstAttribute="centerX" secondItem="LU9-9c-ThI" secondAttribute="centerX" constant="30" id="TTU-rC-z1k"/>
+                            <constraint firstItem="zn4-2e-BI8" firstAttribute="top" secondItem="vz9-65-kTF" secondAttribute="bottom" constant="25" id="Tcj-hZ-Jbv"/>
+                            <constraint firstItem="s28-oB-EcZ" firstAttribute="centerX" secondItem="LU9-9c-ThI" secondAttribute="centerX" id="W6N-6o-6bm"/>
+                            <constraint firstItem="zn4-2e-BI8" firstAttribute="centerX" secondItem="LU9-9c-ThI" secondAttribute="centerX" id="XxO-vH-yql"/>
+                            <constraint firstItem="2dg-Dd-dlW" firstAttribute="centerX" secondItem="LU9-9c-ThI" secondAttribute="centerX" id="YFy-fi-g4E"/>
+                            <constraint firstItem="s28-oB-EcZ" firstAttribute="width" secondItem="dPD-MV-IIe" secondAttribute="width" multiplier="0.95" id="a07-x0-33c"/>
+                            <constraint firstItem="Lf5-ln-hFz" firstAttribute="width" secondItem="s28-oB-EcZ" secondAttribute="width" multiplier="0.7" id="adY-m8-tHq"/>
+                            <constraint firstItem="2dg-Dd-dlW" firstAttribute="centerY" secondItem="dEk-wc-ScV" secondAttribute="centerY" id="dBl-xo-CQL"/>
+                            <constraint firstItem="7Xe-gG-HLr" firstAttribute="leading" secondItem="LU9-9c-ThI" secondAttribute="leading" constant="43.666666666666657" id="dER-lG-YaE"/>
+                            <constraint firstItem="Lf5-ln-hFz" firstAttribute="centerY" secondItem="s28-oB-EcZ" secondAttribute="centerY" id="jHv-DO-Q8i"/>
+                            <constraint firstItem="lfA-va-34s" firstAttribute="top" secondItem="LU9-9c-ThI" secondAttribute="top" constant="125.66666666666666" id="jlg-Nh-1mx"/>
+                            <constraint firstItem="LU9-9c-ThI" firstAttribute="trailing" secondItem="lfA-va-34s" secondAttribute="trailing" constant="42.666666666666686" id="sNZ-Uv-hAx"/>
+                            <constraint firstItem="7Xe-gG-HLr" firstAttribute="top" secondItem="LU9-9c-ThI" secondAttribute="top" constant="125.66666666666663" id="tRO-nd-aRo"/>
+                            <constraint firstItem="s28-oB-EcZ" firstAttribute="centerY" secondItem="LU9-9c-ThI" secondAttribute="centerY" constant="40" id="xeV-Fy-0aV"/>
+                            <constraint firstItem="vz9-65-kTF" firstAttribute="top" secondItem="s28-oB-EcZ" secondAttribute="bottom" constant="25" id="z2y-gb-cy0"/>
+                            <constraint firstItem="LU9-9c-ThI" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="zn4-2e-BI8" secondAttribute="bottom" priority="999" constant="10" id="zIt-Qy-eJ0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="QRS-eb-gRZ">
+                        <barButtonItem key="leftBarButtonItem" title="Exit" id="vaN-1y-mph">
+                            <imageReference key="image" image="xmark" catalog="system" symbolScale="large" renderingMode="hierarchical">
+                                <hierarchicalColors>
+                                    <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color systemColor="secondaryLabelColor"/>
+                                    <color systemColor="tertiaryLabelColor"/>
+                                </hierarchicalColors>
+                            </imageReference>
+                            <connections>
+                                <action selector="backToMainButtonPressed:" destination="beS-Z2-wsx" id="1zi-rM-oDA"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" id="aNf-Vl-LJ4">
+                            <imageReference key="image" image="arrow.clockwise" catalog="system" symbolScale="large" renderingMode="hierarchical">
+                                <hierarchicalColors>
+                                    <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color systemColor="secondaryLabelColor"/>
+                                    <color systemColor="tertiaryLabelColor"/>
+                                </hierarchicalColors>
+                            </imageReference>
+                            <connections>
+                                <action selector="restartMatchButtonPressed:" destination="beS-Z2-wsx" id="sz7-T0-aFm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="gameboardView" destination="Lf5-ln-hFz" id="DkM-GL-fMP"/>
+                        <outlet property="infoLabel" destination="vz9-65-kTF" id="Blz-dG-2dI"/>
+                        <outlet property="nextRoundButton" destination="zn4-2e-BI8" id="mue-Ie-etQ"/>
+                        <outlet property="playerOneName" destination="7Xe-gG-HLr" id="rPh-e3-P0S"/>
+                        <outlet property="playerOneScoreLabel" destination="dEk-wc-ScV" id="2Yo-Yi-W2B"/>
+                        <outlet property="playerTwoName" destination="lfA-va-34s" id="wtI-4m-mPc"/>
+                        <outlet property="playerTwoScoreLabel" destination="CJ8-A5-s8N" id="5Oq-Up-tPV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PM7-sF-dE7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1928.985507246377" y="103.79464285714285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="GRZ-8d-Mjn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Xkx-df-lMV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dEa-rV-SyA">
+                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8Cy-nM-UUD" kind="relationship" relationship="rootViewController" id="4bz-8d-Km3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hHn-DE-G1n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="186" y="104"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
+        <image name="grid" catalog="system" width="128" height="112"/>
+        <image name="square" catalog="system" width="128" height="114"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
